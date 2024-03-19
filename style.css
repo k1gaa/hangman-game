@@ -9,6 +9,7 @@ body {
 
 .container {
   display: flex;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -32,4 +33,23 @@ button {
   font-size: 1.5rem;
   outline: none;
   border: none;
+}
+
+button:hover {
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  letter-spacing: 1rem;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }

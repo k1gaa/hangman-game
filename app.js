@@ -1,9 +1,9 @@
 const form = document.querySelector("form");
 const textInput = form.querySelector("input");
 const result = document.querySelector("h2");
-const wordParagraph = document.querySelector('p')
+const wordParagraph = document.querySelector("p");
 
-const word = ['m', 'y', 's', 'e', 'l', 'f'];
+const word = ["m", "y", "s", "e", "l", "f"];
 let wordHidden = ["_", "_", "_", "_", "_", "_"];
 
 const displayWord = () => {
@@ -11,8 +11,8 @@ const displayWord = () => {
 
   wordHidden.forEach((e) => {
     wordParagraph.textContent += e;
-  })
-}
+  });
+};
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -20,10 +20,11 @@ form.addEventListener("submit", (e) => {
   if (textInput.value != "") {
     checkWord();
   }
+
+  textInput.value = "";
 });
 
 const checkWord = () => {
-
   for (let i = 0; i < word.length; i++) {
     const element = word[i];
 
@@ -32,8 +33,15 @@ const checkWord = () => {
       wordHidden[i] = element;
       displayWord();
       break;
+    } else if (textInput.value == "") {
+      result.textContent = "?";
     } else {
       result.textContent = "letter was not found";
     }
   }
+};
+
+window.onload = function () {
+  displayWord();
+  checkWord();
 };
