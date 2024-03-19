@@ -1,1 +1,2 @@
-# hangman-game
+# simple hangman-game
+written in vannila js 
