@@ -1,10 +1,10 @@
 body {
-  background-color: rgb(50, 50, 50);
-  color: #fff;
+  background-color: pink;
+  color: #000;
 }
 
 * {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -23,20 +23,32 @@ form {
   gap: 1rem;
 }
 
+input,
+button {
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
 input {
   outline: none;
   border: none;
   font-size: 1.5rem;
+  padding-left: 0.7rem;
+}
+
+input::placeholder {
+  font-size: 1.3rem;
 }
 
 button {
   font-size: 1.5rem;
   outline: none;
   border: none;
+  background: #fff;
 }
 
 button:hover {
-  background-color: #aaa;
+  background-color: #eee;
   cursor: pointer;
 }
 
